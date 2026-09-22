@@ -1,0 +1,29 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "agora2bids"
+version = "0.1.0"
+description = "Convert an Agora exam (study) into a BIDS dataset directory"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "gtagora-connector",
+    "pyyaml",
+    "parrec2dcm>=0.2.0",
+    "dcm2niix",
+    "pydicom>=2.4",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=7.0"]
+
+[project.scripts]
+agora2bids = "agora2bids.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["agora2bids"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

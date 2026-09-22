@@ -1,0 +1,824 @@
+[
+ {
+  "name": "GOAL",
+  "parameters": [
+   {
+    "ID": 1316,
+    "Name": "EX_ACQ_scan_type",
+    "NameText": "Scan type",
+    "Properties": {
+     "EnumDescription": 148,
+     "Groups": [
+      118,
+      119,
+      269,
+      271,
+      272,
+      273,
+      284,
+      294
+     ],
+     "Type": "Enum"
+    },
+    "Value": 0
+   },
+   {
+    "ID": 1329,
+    "Name": "EX_ACQ_smartscout_type",
+    "NameText": "SmartPlan survey",
+    "Properties": {
+     "EnumDescription": 152,
+     "Groups": [
+      118,
+      119,
+      269,
+      272,
+      273,
+      284,
+      286
+     ],
+     "Type": "Enum"
+    },
+    "Value": 0
+   },
+   {
+    "ID": 4095,
+    "Name": "RC_is_coca_scan",
+    "NameText": "",
+    "Properties": {
+     "Groups": [
+      452
+     ],
+     "Type": "Int"
+    },
+    "Value": 0
+   },
+   {
+    "ID": 1440,
+    "Name": "EX_DIFF_enable",
+    "NameText": "Diffusion mode",
+    "Properties": {
+     "EnumDescription": 174,
+     "Groups": [
+      144,
+      145,
+      269,
+      271,
+      272,
+      273,
+      284
+     ],
+     "Type": "Enum"
+    },
+    "Value": 0
+   },
+   {
+    "ID": 1541,
+    "Name": "EX_FLL_mode",
+    "NameText": "Arterial Spin labeling",
+    "Properties": {
+     "EnumDescription": 196,
+     "Groups": [
+      157,
+      158,
+      159,
+      269,
+      272,
+      273,
+      284,
+      291
+     ],
+     "Type": "Enum"
+    },
+    "Value": 0
+   },
+   {
+    "ID": 1193,
+    "Name": "EX_ACQ_B0_map",
+    "NameText": "B0 field map",
+    "Properties": {
+     "EnumDescription": 112,
+     "Groups": [
+      118,
+      119,
+      269,
+      272,
+      273,
+      284,
+      286
+     ],
+     "Type": "Enum"
+    },
+    "Value": 0
+   },
+   {
+    "ID": 1195,
+    "Name": "EX_ACQ_B0_map_type",
+    "NameText": "    field map technique",
+    "Properties": {
+     "EnumDescription": 113,
+     "Groups": [
+      118,
+      119,
+      269,
+      272,
+      273,
+      284,
+      286
+     ],
+     "Type": "Enum"
+    },
+    "Value": 0
+   },
+   {
+    "ID": 1198,
+    "Name": "EX_ACQ_B1_map",
+    "NameText": "B1 field map",
+    "Properties": {
+     "EnumDescription": 114,
+     "Groups": [
+      118,
+      119,
+      269,
+      272,
+      273,
+      284,
+      286
+     ],
+     "Type": "Enum"
+    },
+    "Value": 0
+   },
+   {
+    "ID": 1247,
+    "Name": "EX_ACQ_fast_imaging_mode",
+    "NameText": "Fast Imaging mode",
+    "Properties": {
+     "EnumDescription": 130,
+     "Groups": [
+      118,
+      119,
+      269,
+      271,
+      272,
+      273,
+      284
+     ],
+     "Type": "Enum"
+    },
+    "Value": 2
+   },
+   {
+    "ID": 1263,
+    "Name": "EX_ACQ_imaging_sequence",
+    "NameText": "    technique",
+    "Properties": {
+     "EnumDescription": 137,
+     "Groups": [
+      118,
+      119,
+      269,
+      271,
+      272,
+      273,
+      277,
+      284
+     ],
+     "Type": "Enum"
+    },
+    "Value": 3
+   },
+   {
+    "ID": 1486,
+    "Name": "EX_DYN_study",
+    "NameText": "Dynamic study",
+    "Properties": {
+     "EnumDescription": 184,
+     "Groups": [
+      147,
+      148,
+      149,
+      269,
+      272,
+      273,
+      284,
+      291
+     ],
+     "Type": "Enum"
+    },
+    "Value": 0
+   },
+   {
+    "ID": 1472,
+    "Name": "EX_DYN_nr_scans",
+    "NameText": "    dyn scans",
+    "Properties": {
+     "Groups": [
+      147,
+      148,
+      149,
+      269,
+      272,
+      273,
+      278,
+      284,
+      291
+     ],
+     "Type": "Int"
+    },
+    "Value": 1
+   },
+   {
+    "ID": 1796,
+    "Name": "EX_PC_angio_mode",
+    "NameText": "Angio / Contrast enh.",
+    "Properties": {
+     "EnumDescription": 215,
+     "Groups": [
+      198,
+      199,
+      269,
+      272,
+      273,
+      284,
+      291
+     ],
+     "Type": "Enum"
+    },
+    "Value": 0
+   },
+   {
+    "ID": 1800,
+    "Name": "EX_PC_quant_flow",
+    "NameText": "Quantitative flow",
+    "Properties": {
+     "EnumDescription": 0,
+     "Groups": [
+      198,
+      199,
+      269,
+      272,
+      273,
+      284,
+      291
+     ],
+     "Type": "Enum"
+    },
+    "Value": 0
+   },
+   {
+    "ID": 1231,
+    "Name": "EX_ACQ_dixon",
+    "NameText": "mDIXON",
+    "Properties": {
+     "EnumDescription": 124,
+     "Groups": [
+      118,
+      119,
+      269,
+      271,
+      272,
+      273,
+      284
+     ],
+     "Type": "Enum"
+    },
+    "Value": 0
+   },
+   {
+    "ID": 1747,
+    "Name": "EX_IR_delay",
+    "NameText": "IR  delay (ms)",
+    "Properties": {
+     "Groups": [
+      178,
+      179,
+      269,
+      271,
+      272,
+      273,
+      278,
+      284
+     ],
+     "Type": "Float"
+    },
+    "Value": 400
+   },
+   {
+    "ID": 2252,
+    "Name": "EX_T2PREP_te",
+    "NameText": "    echo time (ms)",
+    "Properties": {
+     "Groups": [
+      250,
+      251,
+      269,
+      271,
+      272,
+      273,
+      284
+     ],
+     "Type": "Float"
+    },
+    "Value": 50
+   },
+   {
+    "ID": 1866,
+    "Name": "EX_PROC_image_types",
+    "NameText": "Images",
+    "Properties": {
+     "EnumDescription": 217,
+     "Groups": [
+      201,
+      202,
+      204,
+      205,
+      209,
+      212,
+      269,
+      272,
+      273,
+      278,
+      284,
+      286
+     ],
+     "Type": "Enum"
+    },
+    "Value": [
+     2,
+     4,
+     4,
+     4
+    ]
+   },
+   {
+    "ID": 1253,
+    "Name": "EX_ACQ_flip_angle",
+    "NameText": "Flip angle (deg)",
+    "Properties": {
+     "Groups": [
+      118,
+      119,
+      269,
+      271,
+      272,
+      273,
+      284,
+      287
+     ],
+     "Type": "Float"
+    },
+    "Value": 12
+   }
+  ],
+  "properties": {
+   "EnumDescriptions": [
+    {
+     "ID": 148,
+     "Values": [
+      {
+       "Value": "MGUACQ_SCT_IMAGING",
+       "ValueInt": 0,
+       "ValueText": "Imaging"
+      },
+      {
+       "Value": "MGUACQ_SCT_SPECTRO",
+       "ValueInt": 1,
+       "ValueText": "Spectroscopy"
+      }
+     ]
+    },
+    {
+     "ID": 152,
+     "Values": [
+      {
+       "Value": "MPUACQ_SMARTPLAN_TYPE_NONE",
+       "ValueInt": 0,
+       "ValueText": "no"
+      },
+      {
+       "Value": "MPUACQ_SMARTPLAN_TYPE_BRAIN",
+       "ValueInt": 1,
+       "ValueText": "brain"
+      },
+      {
+       "Value": "MPUACQ_SMARTPLAN_TYPE_KNEE",
+       "ValueInt": 2,
+       "ValueText": "knee"
+      },
+      {
+       "Value": "MPUACQ_SMARTPLAN_TYPE_BOTH_KNEES",
+       "ValueInt": 3,
+       "ValueText": "both knees"
+      },
+      {
+       "Value": "MPUACQ_SMARTPLAN_TYPE_C_SPINE",
+       "ValueInt": 4,
+       "ValueText": "C-spine"
+      },
+      {
+       "Value": "MPUACQ_SMARTPLAN_TYPE_T_SPINE",
+       "ValueInt": 5,
+       "ValueText": "T-spine"
+      },
+      {
+       "Value": "MPUACQ_SMARTPLAN_TYPE_L_SPINE",
+       "ValueInt": 6,
+       "ValueText": "L-spine"
+      },
+      {
+       "Value": "MPUACQ_SMARTPLAN_TYPE_TOTAL_SPINE",
+       "ValueInt": 7,
+       "ValueText": "total spine"
+      },
+      {
+       "Value": "MPUACQ_SMARTPLAN_TYPE_SHOULDER",
+       "ValueInt": 8,
+       "ValueText": "shoulder"
+      },
+      {
+       "Value": "MPUACQ_SMARTPLAN_TYPE_ANKLE",
+       "ValueInt": 9,
+       "ValueText": "ankle"
+      },
+      {
+       "Value": "MPUACQ_SMARTPLAN_TYPE_BOTH_ANKLES",
+       "ValueInt": 10,
+       "ValueText": "both ankles"
+      },
+      {
+       "Value": "MPUACQ_SMARTPLAN_TYPE_WRIST",
+       "ValueInt": 11,
+       "ValueText": "wrist"
+      },
+      {
+       "Value": "MPUACQ_SMARTPLAN_TYPE_BREASTS",
+       "ValueInt": 12,
+       "ValueText": "breasts"
+      },
+      {
+       "Value": "MPUACQ_SMARTPLAN_TYPE_BRAIN_ANGIO",
+       "ValueInt": 13,
+       "ValueText": "brain angio"
+      },
+      {
+       "Value": "MPUACQ_SMARTPLAN_TYPE_CARDIAC_GLOBAL",
+       "ValueInt": 14,
+       "ValueText": "heart global"
+      },
+      {
+       "Value": "MPUACQ_SMARTPLAN_TYPE_CARDIAC_LOCAL",
+       "ValueInt": 15,
+       "ValueText": "heart local"
+      },
+      {
+       "Value": "MPUACQ_SMARTPLAN_TYPE_HIP",
+       "ValueInt": 16,
+       "ValueText": "hip"
+      },
+      {
+       "Value": "MPUACQ_SMARTPLAN_TYPE_BOTH_HIPS",
+       "ValueInt": 17,
+       "ValueText": "both hips"
+      },
+      {
+       "Value": "MPUACQ_SMARTPLAN_TYPE_ABDOMEN",
+       "ValueInt": 18,
+       "ValueText": "abdomen"
+      },
+      {
+       "Value": "MPUACQ_SMARTPLAN_TYPE_PELVIS",
+       "ValueInt": 19,
+       "ValueText": "pelvis"
+      },
+      {
+       "Value": "MPUACQ_SMARTPLAN_TYPE_RESEARCH",
+       "ValueInt": 20,
+       "ValueText": "research"
+      }
+     ]
+    },
+    {
+     "ID": 174,
+     "Values": [
+      {
+       "Value": "MGU_DIFF_TECH_NO",
+       "ValueInt": 0,
+       "ValueText": "no"
+      },
+      {
+       "Value": "MGU_DIFF_TECH_DWI",
+       "ValueInt": 1,
+       "ValueText": "DWI"
+      },
+      {
+       "Value": "MGU_DIFF_TECH_DTI",
+       "ValueInt": 2,
+       "ValueText": "DTI"
+      }
+     ]
+    },
+    {
+     "ID": 196,
+     "Values": [
+      {
+       "Value": "MGUFLL_SEL_NO",
+       "ValueInt": 0,
+       "ValueText": "no"
+      },
+      {
+       "Value": "MGUFLL_SEL_FAIR",
+       "ValueInt": 1,
+       "ValueText": "FAIR"
+      },
+      {
+       "Value": "MGUFLL_SEL_TILT",
+       "ValueInt": 2,
+       "ValueText": "TILT"
+      },
+      {
+       "Value": "MGUFLL_SEL_CASL",
+       "ValueInt": 3,
+       "ValueText": "CASL"
+      },
+      {
+       "Value": "MGUFLL_SEL_STAR",
+       "ValueInt": 4,
+       "ValueText": "STAR"
+      },
+      {
+       "Value": "MGUFLL_SEL_pCASL",
+       "ValueInt": 5,
+       "ValueText": "pCASL"
+      },
+      {
+       "Value": "MGUFLL_SEL_TIMESLIP",
+       "ValueInt": 6,
+       "ValueText": "TIMESLIP"
+      },
+      {
+       "Value": "MGUFLL_SEL_CINEMA",
+       "ValueInt": 7,
+       "ValueText": "STAR Angio"
+      }
+     ]
+    },
+    {
+     "ID": 112,
+     "Values": [
+      {
+       "Value": "MGUACQ_B0_MAP_NO",
+       "ValueInt": 0,
+       "ValueText": "no"
+      },
+      {
+       "Value": "MGUACQ_B0_MAP_YES",
+       "ValueInt": 1,
+       "ValueText": "yes"
+      },
+      {
+       "Value": "MGUACQ_B0_MAP_CAL",
+       "ValueInt": 2,
+       "ValueText": "calibrate"
+      },
+      {
+       "Value": "MGUACQ_B0_MAP_PRE_SCAN",
+       "ValueInt": 3,
+       "ValueText": "pre-scan"
+      }
+     ]
+    },
+    {
+     "ID": 113,
+     "Values": [
+      {
+       "Value": "MGUACQ_B0_MAP_TYPE_MULTI_ACQUISITION",
+       "ValueInt": 0,
+       "ValueText": "multi-acquisition"
+      },
+      {
+       "Value": "MGUACQ_B0_MAP_TYPE_MULTI_ECHO",
+       "ValueInt": 1,
+       "ValueText": "multi-echo"
+      },
+      {
+       "Value": "MGUACQ_B0_MAP_TYPE_DIXON",
+       "ValueInt": 2,
+       "ValueText": "dixon"
+      },
+      {
+       "Value": "MGUACQ_B0_MAP_TYPE_NONE",
+       "ValueInt": 3,
+       "ValueText": "none"
+      }
+     ]
+    },
+    {
+     "ID": 114,
+     "Values": [
+      {
+       "Value": "MGUACQ_B1_MAP_NO",
+       "ValueInt": 0,
+       "ValueText": "no"
+      },
+      {
+       "Value": "MGUACQ_B1_MAP_YES",
+       "ValueInt": 1,
+       "ValueText": "yes"
+      },
+      {
+       "Value": "MGUACQ_B1_MAP_CAL",
+       "ValueInt": 2,
+       "ValueText": "calibrate"
+      }
+     ]
+    },
+    {
+     "ID": 130,
+     "Values": [
+      {
+       "Value": "MGUACQ_FAST_NO",
+       "ValueInt": 0,
+       "ValueText": "none"
+      },
+      {
+       "Value": "MGUACQ_FAST_TSE",
+       "ValueInt": 1,
+       "ValueText": "TSE"
+      },
+      {
+       "Value": "MGUACQ_FAST_TFE",
+       "ValueInt": 2,
+       "ValueText": "TFE"
+      },
+      {
+       "Value": "MGUACQ_FAST_EPI",
+       "ValueInt": 3,
+       "ValueText": "EPI"
+      },
+      {
+       "Value": "MGUACQ_FAST_GRASE",
+       "ValueInt": 4,
+       "ValueText": "GraSE"
+      },
+      {
+       "Value": "MGUACQ_FAST_TFE_EPI",
+       "ValueInt": 5,
+       "ValueText": "TFEPI"
+      },
+      {
+       "Value": "MGUACQ_FAST_TSI",
+       "ValueInt": 6,
+       "ValueText": "TSI"
+      }
+     ]
+    },
+    {
+     "ID": 137,
+     "Values": [
+      {
+       "Value": "MGUACQ_SEQ_SE",
+       "ValueInt": 0,
+       "ValueText": "SE"
+      },
+      {
+       "Value": "MGUACQ_SEQ_IR",
+       "ValueInt": 1,
+       "ValueText": "IR"
+      },
+      {
+       "Value": "MGUACQ_SEQ_MIXED",
+       "ValueInt": 2,
+       "ValueText": "MIX"
+      },
+      {
+       "Value": "MGUACQ_SEQ_FFE",
+       "ValueInt": 3,
+       "ValueText": "FFE"
+      },
+      {
+       "Value": "MGUACQ_SEQ_ECHO",
+       "ValueInt": 4,
+       "ValueText": "ECHO"
+      },
+      {
+       "Value": "MGUACQ_SEQ_FID",
+       "ValueInt": 5,
+       "ValueText": "FID"
+      }
+     ]
+    },
+    {
+     "ID": 184,
+     "Values": [
+      {
+       "Value": "MPUDYN_MODE_NO",
+       "ValueInt": 0,
+       "ValueText": "no"
+      },
+      {
+       "Value": "MPUDYN_MODE_INDIVIDUAL",
+       "ValueInt": 1,
+       "ValueText": "individual"
+      },
+      {
+       "Value": "MPUDYN_MODE_BLOCK",
+       "ValueInt": 2,
+       "ValueText": "block"
+      }
+     ]
+    },
+    {
+     "ID": 215,
+     "Values": [
+      {
+       "Value": "MPU_PC_ANGIO_NO",
+       "ValueInt": 0,
+       "ValueText": "no"
+      },
+      {
+       "Value": "MPU_PC_ANGIO_INFLOW",
+       "ValueInt": 1,
+       "ValueText": "inflow"
+      },
+      {
+       "Value": "MPU_PC_ANGIO_PC",
+       "ValueInt": 2,
+       "ValueText": "phase contrast"
+      },
+      {
+       "Value": "MPU_PC_ANGIO_CE",
+       "ValueInt": 3,
+       "ValueText": "contrast enh."
+      }
+     ]
+    },
+    {
+     "ID": 0,
+     "Values": [
+      {
+       "Value": "NO",
+       "ValueInt": 0,
+       "ValueText": "no"
+      },
+      {
+       "Value": "YES",
+       "ValueInt": 1,
+       "ValueText": "yes"
+      }
+     ]
+    },
+    {
+     "ID": 124,
+     "Values": [
+      {
+       "Value": "MPUACQ_DIXON_NO",
+       "ValueInt": 0,
+       "ValueText": "no"
+      },
+      {
+       "Value": "MPUACQ_DIXON_YES",
+       "ValueInt": 1,
+       "ValueText": "yes"
+      },
+      {
+       "Value": "MPUACQ_DIXON_QUANT",
+       "ValueInt": 2,
+       "ValueText": "quant"
+      }
+     ]
+    },
+    {
+     "ID": 217,
+     "Values": [
+      {
+       "Value": "MGU_ITYP_REAL",
+       "ValueInt": 0,
+       "ValueText": "R"
+      },
+      {
+       "Value": "MGU_ITYP_IMAGINARY",
+       "ValueInt": 1,
+       "ValueText": "I"
+      },
+      {
+       "Value": "MGU_ITYP_MODULUS",
+       "ValueInt": 2,
+       "ValueText": "M"
+      },
+      {
+       "Value": "MGU_ITYP_PHASE",
+       "ValueInt": 3,
+       "ValueText": "P"
+      },
+      {
+       "Value": "MGU_ITYP_NO",
+       "ValueInt": 4,
+       "ValueText": "no"
+      }
+     ]
+    }
+   ]
+  }
+ }
+]
