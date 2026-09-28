@@ -1,0 +1,107 @@
+# Agora YAML task: convert one study (exam) into a BIDS dataset with the gyrotools/agora2bids image.
+#
+# Create it in Agora under Project settings -> Tasks -> new YAML task and paste this file. Before saving, set
+# `host` to a host of the project that can run Docker ("local" runs the container on the Agora server itself).
+#
+# The container downloads the study itself through the Agora API (with the API key of the user who runs the task),
+# so Agora does not push the study's files to the host (push_data: false).
+#
+# Two stages, chained via Agora's artifact-passing (each stage below must have its own distinct
+# `stage:` name, and every such name must be listed under the top-level `stages:` below, or the task
+# fails validation with 'Stage "..." unknown'):
+#   1. agora2bids        - unchanged conversion of the study to BIDS. Its own participants.tsv only ever
+#                           has this one study's row, so it is NOT imported directly (import: false).
+#   2. merge_participants - downloads the project's current BIDS/participants.tsv (if any) via
+#                           gtagora-connector-py, merges it with the row agora2bids just produced
+#                           (keyed/deduped by participant_id), and is the stage that actually imports
+#                           the result - straight into the project root (import_path: "."), so
+#                           repeated runs against different studies accumulate into one shared BIDS/
+#                           folder instead of each overwriting the last.
+#                           Runs on gyrotools/gtagora-connector-py:master-converter, NOT
+#                           gyrotools/agora2bids:master: agora2bids's own Dockerfile sets
+#                           `ENTRYPOINT ["agora2bids"]` on top of that same connector base image, so a
+#                           plain `python ...` command line given to the agora2bids image would run as
+#                           `agora2bids python ...` instead of executing Python. The connector-py
+#                           "-converter" image is a plain `FROM python:3.10` with no entrypoint
+#                           override (see gtagora-connector-py/Docker/converter/Dockerfile) and already
+#                           has gtagora-connector installed, so `script_type: python` works there.
+#
+# Credentials go on the command line rather than in `env`: the "local" host starts the container through the Docker
+# SDK, which ignores environment variables.
+
+stages:
+  - convert
+  - participants
+
+inputs:
+  study:
+    type: study
+    push_data: false
+  task_label:
+    type: string
+    default: unknown
+  dataset_name:
+    type: string
+    default: Agora export
+
+agora2bids:
+  stage: "convert"
+  host: <HOST>
+  image: gyrotools/agora2bids:master
+  script_type: command
+  script: >-
+    {{ inputs.study.id }}
+    --output {{ output_dir }}/BIDS
+    --url {{ agora_url }}
+    --api-key {{ user.api_key }}
+    --task-label "{{ inputs.task_label.value }}"
+    --dataset-name "{{ inputs.dataset_name.value }}"
+  timeout: 14400
+  artifacts:
+    bids:
+      path: "{{ output_dir }}/BIDS"
+      import: false
+
+merge_participants:
+  stage: "participants"
+  host: <HOST>
+  image: gyrotools/gtagora-connector-py:1.8.0
+  script_type: python
+  script: |
+    import csv
+    from pathlib import Path
+    from gtagora.agora import Agora
+
+    bids_dir = Path("{{ artifacts.bids.path }}")
+    new_path = bids_dir / "participants.tsv"
+
+    agora = Agora.create("{{ agora_url }}", api_key="{{ user.api_key }}")
+    project = agora.get_project({{ project.id }})
+    bids_folder = project.get_root_folder().get_folder("BIDS")
+    existing = bids_folder.get_dataset("participants.tsv") if bids_folder else None
+
+    rows, header = {}, None
+    if existing:
+        prev_path = existing.download(bids_dir / "prev")[0]
+        with open(prev_path, newline="") as f:
+            reader = csv.reader(f, delimiter="\t")
+            header = next(reader)
+            for row in reader:
+                rows[row[0]] = row   # keyed by participant_id column
+
+    with open(new_path, newline="") as f:
+        reader = csv.reader(f, delimiter="\t")
+        header = next(reader)
+        for row in reader:
+            rows[row[0]] = row       # this run's row wins over a stale duplicate id
+
+    with open(new_path, "w", newline="") as f:
+        writer = csv.writer(f, delimiter="\t")
+        writer.writerow(header)
+        writer.writerows(rows.values())
+  timeout: 600
+  artifacts:
+    merged_bids:
+      path: "{{ working_dir }}/artifacts/bids/BIDS"
+      import: true
+      import_path: "."

@@ -15,6 +15,16 @@ Running another exam against the same `--output` adds another `sub-<id>/` folder
 its `ses-<exam>` folder. `dataset_description.json` is created if missing and `participants.tsv` gets one row per
 subject.
 
+## Agora task
+
+`agora-task.yml` is an Agora YAML task that runs the [`gyrotools/agora2bids`](https://hub.docker.com/r/gyrotools/agora2bids)
+image on a study and imports the resulting BIDS tree back into Agora. Create a new YAML task in the project settings,
+paste the file and set `host` to a Docker-capable host of the project (`local` = the Agora server). When run, the task
+asks for the study, the functional task label, the dataset name and the folder to import into.
+
+The container downloads the study itself with the running user's API key, so that user needs an API key and the host
+must be able to reach the Agora URL (`agora_url` from the server settings).
+
 ## What it does
 
 1. Resolves the exam's patient (`sub-<Patient.id>`, session `ses-<Exam.id>`).
