@@ -102,6 +102,6 @@ merge_participants:
   timeout: 600
   artifacts:
     merged_bids:
-      path: "{{ working_dir }}/artifacts/bids/BIDS"
+      path: "{{ artifacts.bids.path }}"
       import: true
       import_path: "."
